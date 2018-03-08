@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Slices - Pizza like you never tasted before</title>
+        <!--I love this font thanks Google-->
+        <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+        <link href="Document1-style.css" type="text/css" rel="stylesheet">
+    </head>
+    
+    <body onload="return AccountInfo()">
+        <!-- header start -->
+        <div id="header" class="section">
+            <img alt="" class="img-circle" src="img/sliceslogo.png">
+            <p>Our Signature is extra cheese!</p>
+        </div>
+        <!-- header end -->
+        
+        <!-- JavaScript functions to store and alert the login info -->
+        <script type="text/javascript">
+
+        var urlParams;
+        (window.onpopstate = function() {
+            var match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function(s) { 
+                return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+            urlParams = {};
+            while (match = search.exec(query))
+            urlParams[decode(match[1])] = decode(match[2]);
+            })();
+
+            function AccountInfo()
+            {
+               var Email=urlParams["Email"];
+               var Password=urlParams["Password"];
+               alert("Successfully logged in! \n\n  Email: "+Email+"\n  Password: "+Password);
+            }
+        </script>
+        <!-- JavaScript functions end -->
+
+        <!-- Menu section start -->
+        <div class="section">
+            <h1><span>Each slice is a unique experience:</span></h1>
+            <p><strong>Of course we a e proud of our pizzas!</strong></p>
+            <p>All of our recipes are a different combination of flavors, textures and colors.</p>
+            <p><strong>Which one do you want to taste?</strong></p>
+            <div id="menu">
+                <img src="img/hamwaiian.jpg">
+                <img src="img/pepperoni-feast.jpg">
+                <img src="img/so-white-threecheeses.png">
+                <img src="img/mexican-pizza.png">
+                <img src="img/bacon-mushroom.jpg">
+                <img src="img/salami-chilli-pepper.jpg">
+                <img src="img/ground-meat.jpg">
+                <img src="img/BBQ-chicken.jpg">
+            </div>
+            </div>
+        </div>
+        <!-- Menu section end -->
+        
+        <!-- Prices section start -->
+        <div class="section2">
+            <h1><span>Don't worry too much about the maths...</span></h1>
+            <p><strong>We make it simple for you.</strong></p>
+            <p>You just choose the recipe, and ask for your ideal size.</p></br>
+            <table>
+                <tr>
+                    <th class="selected">Size</th>
+                    <th class="selected2">Individual</th>
+                    <th class="selected2">Medium-sized</th>
+                    <th class="selected2">Familiar</th>
+                    <th class="selected2">Supreme</th>
+                </tr>
+                <tr>
+                    <th class="selected">Concept</th>
+                    <td>"I will share it only to myself"</td>
+                    <td>"For me and 1-2 people"</td>
+                    <td>"For 4-5 people"</td>
+                    <td>"I feel generous..."</td>
+                </tr>
+                <tr>
+                    <th class="selected">Slices</th>
+                    <td>6 slices</td>
+                    <td>8 slices</td>
+                    <td>10 slices</td>
+                    <td>12 slices</td>
+                </tr>
+                <tr>
+                    <th class="selected">Price</th>
+                    <td class="selected2">$5.99</td>
+                    <td class="selected2">$8.99</td>
+                    <td class="selected2">$11.99</td>
+                    <td class="selected2">$14.99</td>
+                </tr>
+            </table>
+        </div>
+        <!-- Prices section end -->
+
+        <!-- Second header start -->
+        <div id="secheader" class="section">
+        <br></br>
+        <p>Each Recipe</p>
+        <p>for</p>
+        <p>Every Feeling</p>
+        <br></br>
+        </div>
+        <!-- Second header end -->
+
+        <!-- About section start -->
+        <div class="section">
+            <h1><span>Keep your people close, and your pizza closer</span></h1>
+            <p>Come for your <strong>slices</strong>!</p></br>
+            <img src="img/map-reference.png">
+            <img src="img/contact-info.jpg">
+        </div>
+        <!-- About section end -->
+
+       <!-- Form section start --> 
+       <div class="section2">
+            <h1><span>Order your slices here</span></h1>
+            <form action="blank" method="POST">
+                <input name="Name" placeholder="Your Name" type="text" required /><br/>
+                <input name="Email" placeholder="Your Email" type="email" required /><br/>
+                <input name="OrderDetails" placeholder="Recipe and Size of pizza you want to order" type="text" required /><br/>
+                <textarea name="AddressMessage" placeholder="Delivery Address (and additional comments if you want to)" required ></textarea>
+                <input type="submit" value="Order" class="submit" />
+            </form>
+        </div>
+        <!-- Form section end -->
+        
+        <!-- Contacts section start -->
+        <div class="section" id="contacts">
+            <h1><span>Fav/Rate Us</span></h1>
+            <div>
+                <p><strong>We care about your opinion.</strong></p>
+                <p>Follow us on our social networks and spread the word.</p>
+                <a href="#">
+                    <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                </a>
+                <a href="#">
+                    <img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+                </a>
+            </div>
+        </div>
+        <!-- Contacts section end -->
+        
+        <div class="copyright">
+           Pizza like you never tasted before. <span style="color:red;">Slices Pizzaria.</span><br/>
+            &copy; 2018. All rights reserved.
+        </div>   
+    </body>
+</html>
